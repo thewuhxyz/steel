@@ -1,3 +1,5 @@
+#[cfg(feature = "borsh")]
+mod borsh;
 mod cpi;
 mod loaders;
 pub mod macros;
