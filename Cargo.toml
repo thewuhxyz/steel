@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["cli", "lib"]
+members = ["cli", "lib", "example/*"]
 
 [workspace.package]
 version = "2.1.1"
@@ -13,6 +13,7 @@ readme = "./README.md"
 keywords = ["solana"]
 
 [workspace.dependencies]
+borsh = "1.5.3"
 bytemuck = "1.14"
 clap = { features = ["derive", "env"], version = "4.4" }
 clap_v3 = { version = "3", package = "clap" }

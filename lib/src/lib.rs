@@ -1,3 +1,5 @@
+#[cfg(feature = "borsh")]
+mod borsh_mod;
 mod cpi;
 mod loaders;
 pub mod macros;
@@ -8,6 +10,8 @@ pub use cpi::*;
 pub use traits::*;
 pub use utils::*;
 
+#[cfg(feature = "borsh")]
+pub use borsh::{BorshDeserialize, BorshSerialize};
 pub use bytemuck::{Pod, Zeroable};
 pub use num_enum::{IntoPrimitive, TryFromPrimitive};
 pub use solana_program::{
